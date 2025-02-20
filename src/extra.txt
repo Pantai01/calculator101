@@ -1,1 +1,7 @@
 py -m http.server
+code package.json
+npm i selenium-webdriver
+npm i mocha
+npm i assert 
+./node_modules/.bin/mocha test1.spec.js
+npm init
