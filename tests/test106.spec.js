@@ -30,7 +30,7 @@ describe('test6(.5,.6)', function() {
 
       // Take a screenshot of the result page
 
-      const filename = this.currentTest.fullTitle()
+      const filename = "test106"
 
           .replace(/['"]+/g, '')
 
