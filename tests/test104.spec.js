@@ -40,7 +40,7 @@ describe('test4(0,π)', function() {
 
       const encodedString = await driver.takeScreenshot();
 
-      await fs.writeFileSync(`./screenshots/${filename}.png`,
+      await fs.writeFileSync(`../screenshots/${filename}.png`,
 
           encodedString, 'base64');
 
@@ -65,7 +65,7 @@ describe('test4(0,π)', function() {
 
             const encodedString = await driver.takeScreenshot();
 
-            await fs.writeFileSync(`./screenshots/${filename}.png`,
+            await fs.writeFileSync(`../screenshots/${filename}.png`,
 
                 encodedString, 'base64');
   })
