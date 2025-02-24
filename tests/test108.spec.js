@@ -53,7 +53,7 @@ describe('test8(reset)', function() {
     }
   })
   it('test8(reset)', async function() {
-    await driver.get("http://127.0.0.1:3000/")
+    await driver.get("http://localhost:8000")
     await driver.manage().window().setRect({ width: 945, height: 1012 })
     await driver.findElement(By.id("num1")).click()
     await driver.findElement(By.id("num1")).sendKeys("5")
