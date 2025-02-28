@@ -8,9 +8,9 @@ describe('test8(reset)', function() {
   let driver
   let vars
 
-  if (!fs.existsSync('./screenshots')) {
+  if (!fs.existsSync('../screenshots')) {
 
-    fs.mkdirSync('./screenshots');
+    fs.mkdirSync('../screenshots');
 
   }
 
@@ -59,8 +59,8 @@ describe('test8(reset)', function() {
     await driver.findElement(By.id("num1")).sendKeys("5")
     await driver.findElement(By.id("num2")).click()
     await driver.findElement(By.id("num2")).sendKeys("7")
-    await driver.findElement(By.css("button:nth-child(1)")).click()
-    await driver.findElement(By.css("button:nth-child(2)")).click()
+    await driver.findElement(By.id("addBtn")).click()
+    await driver.findElement(By.id("resBtn")).click()
 
     const filename = 'test108';
 
