@@ -8,9 +8,9 @@ describe('test3(0,-1)', function() {
   let driver
   let vars
 
-  if (!fs.existsSync('./screenshots')) {
+  if (!fs.existsSync('../screenshots')) {
 
-    fs.mkdirSync('./screenshots');
+    fs.mkdirSync('../screenshots');
 
   }
   
@@ -59,7 +59,7 @@ describe('test3(0,-1)', function() {
     await driver.findElement(By.id("num1")).sendKeys("0")
     await driver.findElement(By.id("num2")).click()
     await driver.findElement(By.id("num2")).sendKeys("-1")
-    await driver.findElement(By.css("button:nth-child(1)")).click()
+    await driver.findElement(By.id("addBtn")).click()
 
     const filename = 'test103';
 
