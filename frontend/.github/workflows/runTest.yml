@@ -8,6 +8,7 @@ on:
   pull_request:
     branches: [develop]
 
+
   
 
 jobs:
@@ -45,8 +46,23 @@ jobs:
           install-dependencies: true
 
       - run: |
+          
+           
+            cd backend/calculatorbe
 
-            cd src
+            mvn clean install
+
+            sleep 20 &&
+
+            mvn spring-boot:run 
+
+            sleep 20 &&
+
+            cd ..
+
+            cd ..
+
+            cd frontend/src
 
             python3 -m http.server 8000 &
 
