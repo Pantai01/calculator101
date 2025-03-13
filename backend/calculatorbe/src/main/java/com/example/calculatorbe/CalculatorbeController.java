@@ -9,21 +9,21 @@ import java.util.HashMap;
 import java.util.Map;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:8080")
+@CrossOrigin(origins = "http://localhost:8000")
 public class CalculatorbeController {
     
     @GetMapping("/add")
-    public Map<String, Integer> add(@RequestParam int num1, @RequestParam int num2) {
-        int result = num1 + num2;
-        Map<String, Integer> response = new HashMap<>();
+    public Map<String, Float> add(@RequestParam float num1, @RequestParam float num2) {
+        float result = num1 + num2;
+        Map<String, Float> response = new HashMap<>();
         response.put("result", result);
         return response;
     }
 
     @GetMapping("/sub")
-    public Map<String, Integer> sub(@RequestParam int num1, @RequestParam int num2) {
-        int result = num1 - num2;
-        Map<String, Integer> response = new HashMap<>();
+    public Map<String, Float> sub(@RequestParam float num1, @RequestParam float num2) {
+        float result = num1 - num2;
+        Map<String, Float> response = new HashMap<>();
         response.put("result", result);
         return response;
     }
