@@ -47,7 +47,7 @@ jobs:
            echo "sever ready for testing"
            npm install -g newman
            newman -v
-           newman run backend/calculatorbe/src/test/integration/calculator.postman_collection.json
+           newman run src/test/integration/calculator.postman_collection.json
            echo "Backend tests finished!"
 
       - name : Run frontend tests
