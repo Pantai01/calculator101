@@ -68,6 +68,7 @@ jobs:
             
       - name: Run frotend test
         run : |
+            ls
             cd ../../frontend/
             npm install
             cd src/
