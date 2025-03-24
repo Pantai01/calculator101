@@ -50,7 +50,7 @@ jobs:
         run: |
           npm install -g newman
           newman -v
-          newman run src/test/integration/calculator.postman_collection.json
+          newman run backend/src/test/integration/calculator.postman_collection.json
           echo "Backend tests finished!"
 
       - name : Run frontend tests
