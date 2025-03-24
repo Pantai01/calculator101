@@ -45,13 +45,10 @@ jobs:
               sleep 5
            done
            echo "sever ready for testing"
-
-      - name : Run backend tests
-        run: |
-          npm install -g newman
-          newman -v
-          newman run backend/calculatorbe/src/test/integration/calculator.postman_collection.json
-          echo "Backend tests finished!"
+           npm install -g newman
+           newman -v
+           newman run backend/calculatorbe/src/test/integration/calculator.postman_collection.json
+           echo "Backend tests finished!"
 
       - name : Run frontend tests
         run: |
