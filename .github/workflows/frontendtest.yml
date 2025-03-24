@@ -75,7 +75,7 @@ jobs:
             python3 -m http.server 8000 &
             sleep 20 &&
             curl http://localhost:8000
-            cd tests
+            cd ../tests
             ../node_modules/.bin/mocha *.js
        
       - uses: actions/upload-artifact@v4
