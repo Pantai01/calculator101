@@ -24,8 +24,6 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: '20'
-    - name: Grant execute permission to Maven Wrapper
-      run: chmod +x backend/calculator/mvnw
     - name: Build with Maven
       run: |
           cd backend/calculatorbe
