@@ -11,14 +11,16 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-    container:
-      image: node:20
 
     steps:
     - uses: actions/checkout@v4
     - uses: actions/setup-node@v4
       with:
         node-version: '20'
+    - uses: browser-actions/setup-chrome@v1
+      with:
+        chrome-version: 120
+        install-dependencies: true
     - name: Set up JDK 21
       uses: actions/setup-java@v4
       with:
