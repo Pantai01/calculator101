@@ -17,11 +17,11 @@ function addition(){
 
     //Using the Backedend Server
     fetch(`http://localhost:8080/add?num1=${num1}&num2=${num2}`)
-        .then(response => response.json())
-        .then(data => {
+        .then(response => response.text())
+        .then(result => {
             document.getElementById('operator').innerText = "+";
-            document.getElementById('result').innerText = "Result: " + data.result;
-            console.log("Addition of " + num1 + " and " + num2 + " is " + data.result);
+            document.getElementById('result').innerText = "Result: " + result;
+            console.log("Addition of " + num1 + " and " + num2 + " is " + result);
         })
         .catch(error => console.error('Error:', error));
 }
@@ -41,11 +41,11 @@ function substraction(){
 
     //Using the Backend Server
     fetch(`http://localhost:8080/sub?num1=${num1}&num2=${num2}`)
-        .then(response => response.json())
-        .then(data => {
+        .then(response => response.text())
+        .then(result => {
             document.getElementById('operator').innerText = "-";
-            document.getElementById('result').innerText = "Result: " + data.result;
-            console.log("Substraction of " + num1 + " - " + num2 + " is " + data.result);
+            document.getElementById('result').innerText = "Result: " + result;
+            console.log("Substraction of " + num1 + " - " + num2 + " is " + result);
         })
         .catch(error => console.error('Error:', error));
 }

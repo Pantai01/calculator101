@@ -13,18 +13,18 @@ import java.util.Map;
 public class CalculatorbeController {
     
     @GetMapping("/add")
-    public Map<String, Float> add(@RequestParam float num1, @RequestParam float num2) {
+    public Float add(@RequestParam(defaultValue = "0.0") float num1, @RequestParam(defaultValue = "0.0") float num2) {
         float result = num1 + num2;
-        Map<String, Float> response = new HashMap<>();
-        response.put("result", result);
-        return response;
+        //Map<String, Float> response = new HashMap<>();
+        //response.put("result", result);
+        return result;
     }
 
     @GetMapping("/sub")
-    public Map<String, Float> sub(@RequestParam float num1, @RequestParam float num2) {
+    public Float sub(@RequestParam(defaultValue = "0.0") float num1, @RequestParam(defaultValue = "0.0") float num2) {
         float result = num1 - num2;
-        Map<String, Float> response = new HashMap<>();
-        response.put("result", result);
-        return response;
+        //Map<String, Float> response = new HashMap<>();
+        //response.put("result", result);
+        return result;
     }
 }
